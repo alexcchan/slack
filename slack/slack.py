@@ -36,6 +36,21 @@ def clean_kwargs(kwargs):
             kwargs[key] = ','.join(map(str, value))
 
 
+def urlencode(d):
+    encoded = {}
+    # TODO Handle mutiple parameters with the same name
+    for k,v in d.iteritems():
+        k = k.encode('utf-8')
+        if v is None:
+            v = ''
+        elif isinstance(v,basestring):
+            v = v.encode('utf-8')
+        else:
+            v = json.dumps(v)
+        encoded[k] = v
+    return urllib.urlencode(encoded)
+
+
 class Slack(object):
 
     def __init__(self, token=None, api_version=1, client_args={}):
@@ -60,12 +75,12 @@ class Slack(object):
                     lambda m: "%s" % urllib.quote(str(kwargs.pop(m.group(1),''))),
                     SLACK_BASE_URL + path
             )
-            clean_kwargs(kwargs)
+            #clean_kwargs(kwargs)
             for kw in kwargs:
                 if kw not in valid_params:
                     raise TypeError("%s() got an unexpected keyword argument "
                             "'%s'" % (api_call, kw))
-            url += '?' + urllib.urlencode(kwargs)
+            url += '?' + urlencode(kwargs)
             return self._make_request(method, url, body, status)
         return call.__get__(self)
 
@@ -79,7 +94,7 @@ class Slack(object):
             if isinstance(body, dict):
                 body['token'] = self.token
                 if content_type == 'application/x-www-form-urlencoded':
-                    body = urllib.urlencode(body)
+                    body = urlencode(body)
                 elif content_type == 'application/json':
                     body = json.dumps(body)
         else:
