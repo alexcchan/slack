@@ -20,6 +20,10 @@ mapping_table = {
         'path': '/channels.list',
         'valid_params': ['exclude_archived']
     },
+    'channels_set_topic': {
+        'path': '/channels.setTopic',
+        'valid_params': ['channel','topic']
+    },
 
     'chat_post_message': {
         'path': '/chat.postMessage',
@@ -28,6 +32,10 @@ mapping_table = {
     'chat_delete': {
         'path': '/chat.delete',
         'valid_params': ['channel','ts']
+    },
+
+    'emoji_list': {
+        'path': '/emoji.list'
     },
 
     'im_list': {
