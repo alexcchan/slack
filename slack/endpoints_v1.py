@@ -59,6 +59,11 @@ mapping_table = {
         'valid_params': ['channel','file','file_comment','timestamp']
     },
 
+    'search_messages': {
+        'path': '/search.messages',
+        'valid_params': ['query','sort','sort_dir','highlight','count','page']
+    },
+
     'users_list': {
         'path': '/users.list'
     },
