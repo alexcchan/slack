@@ -25,6 +25,15 @@ mapping_table = {
         'valid_params': ['channel','topic']
     },
 
+    'groups_history': {
+        'path': '/groups.history',
+        'valid_params': ['channel','latest','oldest','inclusive','count']
+    },
+    'groups_list': {
+        'path': '/groups.list',
+        'valid_params': ['exclude_archived']
+    },
+
     'chat_post_message': {
         'path': '/chat.postMessage',
         'valid_params': ['channel', 'text','username','as_user','parse','link_names','attachments','unfurl_links','unfurl_media','icon_url','icon_emoji']
