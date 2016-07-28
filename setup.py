@@ -12,7 +12,7 @@ setup(
 	license='LICENSE.txt',
 	url = 'https://github.com/alexcchan/slack/tree/master',
 	keywords = 'slack api',
-	description = 'Slack API v2 Wrapper for Python',
+	description = 'Slack API Wrapper for Python',
 	classifiers = [
 		'Development Status :: 4 - Beta',
 		'Intended Audience :: Developers',
