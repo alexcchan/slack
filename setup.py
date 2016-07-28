@@ -9,7 +9,6 @@ setup(
 	packages = ['slack'],
 	include_package_data = True,
 	install_requires = ['httplib2', 'simplejson'],
-	license='LICENSE.txt',
 	url = 'https://github.com/alexcchan/slack/tree/master',
 	keywords = 'slack api',
 	description = 'Slack API Wrapper for Python',
