@@ -68,6 +68,23 @@ mapping_table = {
         'valid_params': ['channel','file','file_comment','timestamp']
     },
 
+    'reactions_add': {
+        'path': '/reactions.add',
+        'valid_params': ['name','file','file_comment','channel','timestamp']
+    },
+    'reactions_get': {
+        'path': '/reactions.get',
+        'valid_params': ['file','file_comment','channel','timestamp','full']
+    },
+    'reactions_list': {
+        'path': '/reactions.list',
+        'valid_params': ['user','full','count','page']
+    },
+    'reactions_remove': {
+        'path': '/reactions.remove',
+        'valid_params': ['name','file','file_comment','channel','timestamp']
+    },
+
     'search_messages': {
         'path': '/search.messages',
         'valid_params': ['query','sort','sort_dir','highlight','count','page']
