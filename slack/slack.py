@@ -5,6 +5,7 @@
 
 
 import httplib2
+import logging
 import re
 import urllib
 try:
@@ -99,6 +100,14 @@ class Slack(object):
                     body = json.dumps(body)
         else:
             url += '&token=' + self.token
+        try:
+            logging.debug('slack.Slack._make_request')
+            logging.debug(method)
+            logging.debug(url)
+            logging.debug(headers)
+            logging.debug(body.encode('utf-8'))
+        except:
+            pass
         response,content = self.client.request(url, method=method, body=body,
                 headers=headers)
         return self._response_handler(response, content, status)
