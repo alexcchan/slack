@@ -16,6 +16,10 @@ mapping_table = {
         'path': '/channels.history',
         'valid_params': ['channel','latest','oldest','inclusive','count']
     },
+    'channels_info': {
+        'path': '/channels.info',
+        'valid_params': ['channel']
+    },
     'channels_list': {
         'path': '/channels.list',
         'valid_params': ['exclude_archived']
