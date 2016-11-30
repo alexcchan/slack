@@ -91,7 +91,8 @@ mapping_table = {
     },
 
     'users_list': {
-        'path': '/users.list'
+        'path': '/users.list',
+        'valid_params': ['presence']
     },
 
 }

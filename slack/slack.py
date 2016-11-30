@@ -16,6 +16,7 @@ from endpoints_v1 import mapping_table as mapping_table_v1
 from httplib import responses
 
 
+LOG_HTTP = True
 SLACK_BASE_URL = 'https://slack.com'
 DEFAULT_HTTP_METHOD = 'POST'
 DEFAULT_HTTP_STATUS_CODE = 200
@@ -100,14 +101,15 @@ class Slack(object):
                     body = json.dumps(body)
         else:
             url += '&token=' + self.token
-        try:
-            logging.debug('slack.Slack._make_request')
-            logging.debug(method)
-            logging.debug(url)
-            logging.debug(headers)
-            logging.debug(body.encode('utf-8'))
-        except:
-            pass
+        if LOG_HTTP:
+            try:
+                logging.debug('slack.Slack._make_request')
+                logging.debug(method)
+                logging.debug(url)
+                logging.debug(headers)
+                logging.debug(body.encode('utf-8'))
+            except:
+                pass
         response,content = self.client.request(url, method=method, body=body,
                 headers=headers)
         return self._response_handler(response, content, status)
