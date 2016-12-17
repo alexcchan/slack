@@ -47,6 +47,35 @@ mapping_table = {
         'valid_params': ['channel','ts']
     },
 
+    'files_delete': {
+        'path': '/files.delete',
+        'valid_params': ['file']
+    },
+    'files_info': {
+        'path': '/files.info',
+        'valid_params': ['file','count','page']
+    },
+    'files_list': {
+        'path': '/files.list',
+        'valid_params': ['user','channel','ts_from','ts_to','types','count','page']
+    },
+    'files_revoke_public_url': {
+        'path': '/files.revokePublicURL',
+        'valid_params': ['file']
+    },
+    'files_shared_public_url': {
+        'path': '/files.sharedPublicURL',
+        'valid_params': ['file']
+    },
+    'files_revoke_public_url': {
+        'path': '/files.revokePublicURL',
+        'valid_params': ['file']
+    },
+    'files_upload': {
+        'path': '/files.upload',
+        'valid_params': ['file','content','filetype','filename','title','initial_comment','channels']
+    },
+
     'emoji_list': {
         'path': '/emoji.list'
     },
