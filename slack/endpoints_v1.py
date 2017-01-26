@@ -40,7 +40,7 @@ mapping_table = {
 
     'chat_post_message': {
         'path': '/chat.postMessage',
-        'valid_params': ['channel', 'text','username','as_user','parse','link_names','attachments','unfurl_links','unfurl_media','icon_url','icon_emoji']
+        'valid_params': ['channel','text','username','as_user','parse','link_names','attachments','unfurl_links','unfurl_media','username','as_user','icon_url','icon_emoji','thread_ts','reply_broadcast']
     },
     'chat_delete': {
         'path': '/chat.delete',
