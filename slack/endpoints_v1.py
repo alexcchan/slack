@@ -91,7 +91,7 @@ mapping_table = {
     'mpim_list': {
         'path': '/mpim.list'
     },
-    'im_open': {
+    'mpim_open': {
         'path': '/mpim.open',
         'valid_params': ['users']
     },
