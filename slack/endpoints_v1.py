@@ -88,6 +88,14 @@ mapping_table = {
         'valid_params': ['user']
     },
 
+    'mpim_list': {
+        'path': '/mpim.list'
+    },
+    'im_open': {
+        'path': '/mpim.open',
+        'valid_params': ['users']
+    },
+
     'pins_add': {
         'path': '/pins.add',
         'valid_params': ['channel','file','file_comment','timestamp']
