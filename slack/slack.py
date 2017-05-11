@@ -45,7 +45,9 @@ def urlencode(d):
         k = k.encode('utf-8')
         if v is None:
             v = ''
-        elif isinstance(v,basestring):
+        elif isinstance(v,str):
+            pass
+        elif isinstance(v,unicode):
             v = v.encode('utf-8')
         else:
             v = json.dumps(v)
