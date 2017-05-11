@@ -45,10 +45,12 @@ def urlencode(d):
         k = k.encode('utf-8')
         if v is None:
             v = ''
-        elif isinstance(v,str):
-            pass
-        elif isinstance(v,unicode):
-            v = v.encode('utf-8')
+        elif isinstance(v,basestring):
+            try:
+                v = v.encode('utf-8')
+            except UnicodeDecodeError:
+                # value is already encoded
+                pass
         else:
             v = json.dumps(v)
         encoded[k] = v
