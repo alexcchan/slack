@@ -16,7 +16,7 @@ from endpoints_v1 import mapping_table as mapping_table_v1
 from httplib import responses
 
 
-LOG_HTTP = True
+LOG_HTTP = False
 SLACK_BASE_URL = 'https://slack.com'
 DEFAULT_HTTP_METHOD = 'POST'
 DEFAULT_HTTP_STATUS_CODE = 200
