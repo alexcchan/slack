@@ -47,6 +47,27 @@ mapping_table = {
         'valid_params': ['channel','ts']
     },
 
+    'conversations_history': {
+        'path': '/conversations.history',
+        'valid_params': ['channel','latest','oldest','inclusive','limit']
+    },
+    'conversations_info': {
+        'path': '/conversations.info',
+        'valid_params': ['channel','include_locale','include_num_members']
+    },
+    'conversations_list': {
+        'path': '/conversations.list'
+        'valid_params': ['exclude_archived','types']
+    },
+    'convesations_open': {
+        'path': '/conversations.open',
+        'valid_params': ['channel','return_im','users']
+    },
+    'conversations_set_topic': {
+        'path': '/conversations.setTopic',
+        'valid_params': ['channel','topic']
+    },
+
     'files_delete': {
         'path': '/files.delete',
         'valid_params': ['file']
