@@ -56,7 +56,7 @@ mapping_table = {
         'valid_params': ['channel','include_locale','include_num_members']
     },
     'conversations_list': {
-        'path': '/conversations.list'
+        'path': '/conversations.list',
         'valid_params': ['exclude_archived','types']
     },
     'convesations_open': {
