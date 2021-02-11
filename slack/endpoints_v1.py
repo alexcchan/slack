@@ -59,7 +59,7 @@ mapping_table = {
         'path': '/conversations.list',
         'valid_params': ['exclude_archived','types']
     },
-    'convesations_open': {
+    'conversations_open': {
         'path': '/conversations.open',
         'valid_params': ['channel','return_im','users']
     },
