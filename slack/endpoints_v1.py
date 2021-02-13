@@ -49,7 +49,7 @@ mapping_table = {
 
     'conversations_history': {
         'path': '/conversations.history',
-        'valid_params': ['channel','latest','oldest','inclusive','limit']
+        'valid_params': ['channel','latest','oldest','inclusive','limit','cursor']
     },
     'conversations_info': {
         'path': '/conversations.info',
@@ -57,7 +57,11 @@ mapping_table = {
     },
     'conversations_list': {
         'path': '/conversations.list',
-        'valid_params': ['exclude_archived','types']
+        'valid_params': ['exclude_archived','types','limit','cursor']
+    },
+    'conversations_members': {
+        'path': '/conversations.members',
+        'valid_params': ['channel','limit','cursor']
     },
     'conversations_open': {
         'path': '/conversations.open',
