@@ -59,7 +59,7 @@ def urlencode(d):
 
 class Slack(object):
 
-    def __init__(self, token=None, api_version=1, client_args={}):
+    def __init__(self, token=None, api_version=1, client_args={}, cookies=None):
         self.token = token
         if api_version == 1:
             self.mapping_table = mapping_table_v1
@@ -67,6 +67,7 @@ class Slack(object):
             raise ValueError("Unsupported Slack API Version: %d" %
                     api_version)
         self.client = httplib2.Http(**client_args)
+        self.cookies = cookies
 
     def __getattr__(self, api_call):
         def call(self, **kwargs):
@@ -92,6 +93,11 @@ class Slack(object):
 
     def _make_request(self, method, url, body, status):
         headers = {}
+        if self.cookies:
+            if isinstance(self.cookies, dict):
+                headers['Cookies'] = '; '.join([str(x)+'='+str(y) for x,y in self.cookies.items()])
+            elif isinstance(self.cookies, basestring):
+                headers['Cookies'] = cookies
         if method not in ('GET','DELETE') and body is None:
             body = {}
         if body:
