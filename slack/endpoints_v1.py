@@ -57,7 +57,7 @@ mapping_table = {
     },
     'conversations_list': {
         'path': '/conversations.list',
-        'valid_params': ['exclude_archived','types','limit','cursor']
+        'valid_params': ['exclude_archived','types','limit','cursor','team_id']
     },
     'conversations_members': {
         'path': '/conversations.members',
@@ -153,12 +153,12 @@ mapping_table = {
 
     'search_messages': {
         'path': '/search.messages',
-        'valid_params': ['query','sort','sort_dir','highlight','count','page']
+        'valid_params': ['query','sort','sort_dir','highlight','count','page','team_id']
     },
 
     'users_list': {
         'path': '/users.list',
-        'valid_params': ['presence']
+        'valid_params': ['presence','team_id']
     },
 
 }
