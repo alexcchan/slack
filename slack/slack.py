@@ -97,7 +97,7 @@ class Slack(object):
             if isinstance(self.cookies, dict):
                 headers['Cookies'] = '; '.join([str(x)+'='+str(y) for x,y in self.cookies.items()])
             elif isinstance(self.cookies, basestring):
-                headers['Cookies'] = cookies
+                headers['Cookies'] = self.cookies
         if method not in ('GET','DELETE') and body is None:
             body = {}
         if body:
