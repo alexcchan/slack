@@ -158,7 +158,7 @@ mapping_table = {
 
     'users_list': {
         'path': '/users.list',
-        'valid_params': ['presence','team_id']
+        'valid_params': ['presence','team_id','limit']
     },
 
 }
